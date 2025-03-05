@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+:root {
+  --primary-color: rgb(145, 192, 202);
+  --primary-color-darker: rgb(16, 73, 85);
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  background: linear-gradient(to bottom, #87CEEB, #B0E0E6); 
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+  max-width: 500px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 500em;
+  position: relative;
+ z-index: 2;
+}
+
+form input, form label, form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+
+}
+
+form input:focus {
+  outline: 1px solid var(--primary-color);
+}
+
+form button {
+    width: auto; /* Para os botões ficarem do tamanho do conteúdo */
+  border-radius: 20px;
+  display: flex;
+align-items: center;
+justify-content: center;
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  height: 30px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  padding: 20px 16px;
+  z-index: 2;
+}
+
+
+form button:hover {
+  background: var(--primary-color-darker);
+}
+
+  
+  .cloud {
+    position: absolute;
+    background: white;
+    width: 120px;
+    height: 60px;
+    border-radius: 50px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .cloud::before, .cloud::after {
+    content: "";
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+  }
+  
+  .cloud::before {
+    width: 70px;
+    height: 70px;
+    top: -30px;
+    left: 15px;
+  }
+  
+  .cloud::after {
+    width: 90px;
+    height: 90px;
+    top: -40px;
+    left: 50px;
+  }
+  
+  @keyframes moveClouds {
+    0% { transform: translateX(-100vw); }
+    100% { transform: translateX(100vw); }
+  }
+  
+  .cloud {
+    animation: moveClouds 30s linear infinite;
+  }
+    
+
+.relogio {
+    font-size: 3em;
+
+  }
+
+.pausado{
+    color: red;
+}
